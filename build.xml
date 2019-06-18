@@ -2,10 +2,10 @@
 <project name="test" default="distribution">
     <!-- 定义properties -->
     <property file="build.properties" />
-    <property name="src.dir" value="src" />
+    <property name="src.dir" value="main" />
     <property name="test.dir" value="test" />
     <property name="classes.dir" value="classes" />
-    <property name="webroot.dir" value="WebRoot" />
+    <property name="webroot.dir" value="web" />
     <!-- 创建工程临时build路径 -->
     <property name="build.dir" value="build"/>
     <!-- 最终发布名称 -->
