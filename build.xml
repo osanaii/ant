@@ -2,7 +2,7 @@
 <project name="test" default="distribution">
     <!-- 定义properties -->
     <property file="build.properties" />
-    <property name="src.dir" value="main" />
+    <property name="src.dir" value="src" />
     <property name="test.dir" value="test" />
     <property name="classes.dir" value="classes" />
     <property name="webroot.dir" value="web" />
@@ -52,9 +52,9 @@
         <javac srcdir="${src.dir}" destdir="${classes.dir}/src" debug="true" encoding="utf-8">
             <classpath refid="compile.classpath"/>
         </javac>
-        <javac srcdir="${test.dir}" destdir="${classes.dir}/test" debug="true" encoding="utf-8">
+        <!--<javac srcdir="${test.dir}" destdir="${classes.dir}/test" debug="true" encoding="utf-8">
             <classpath refid="compile.classpath"/>
-        </javac>
+        </javac>-->
         <!-- 将配置文件复制过去 -->
         <echo message="copy the file..."/>
         <copy todir="${classes.dir}/src">
@@ -64,11 +64,11 @@
             </fileset>
         </copy>
         <!-- 将测试代码配置文件复制过去 -->
-        <copy todir="${classes.dir}/test">
+        <!--<copy todir="${classes.dir}/test">
             <fileset dir="${test.dir}">
                 <include name="*.*"/>
             </fileset>
-        </copy>
+        </copy>-->
     </target>
 
     <!-- 复制文件 -->
